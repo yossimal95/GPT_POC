@@ -1,0 +1,148 @@
+:root {
+    --text-color: #f2f2f2;
+    --main-bg-color: #444654;
+    --second-bg-color: #343641;
+}
+
+body, html {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.output-contianer {
+    flex: 1;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.output {
+    padding: 10px;
+    box-sizing: border-box;
+    height: 95%;
+    width: 95%;
+    border: 1px solid white;
+    border-radius: 3px;
+    direction: rtl;
+    text-align: right;
+    overflow-y: auto;
+    padding-bottom: 300px;
+}
+
+.input-contianer {
+    flex-basis: 100px;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: red;
+    display: flex;
+}
+   
+.input-contianer > div:first-child {
+    flex: 1;   
+    background-color: var(--second-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    direction: rtl;
+    width: 97%;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 14px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: var(--text-color);
+    box-shadow: 0px 0px 16px 0px var(--main-bg-color);
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.input-contianer > div:last-child {
+    flex-basis: 100px;
+    background-color: var(--second-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-bg-color);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid var(--text-color);
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.button:hover {
+    background-color: var(--second-bg-color);
+}
+
+.button-icon {
+    direction: rtl;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: var(--text-color)
+}
+
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 0, 0, 0); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: black; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+@media screen and (max-width: 430px) {
+    .output-contianer {
+        font-size: 14px;
+    }
+
+    .output {
+        padding-bottom: 100px;
+    }
+
+    .input-contianer > div:last-child {
+        flex-basis: 50px;
+    }
+
+    .button {
+        width: 30px;
+        height: 30px;
+    }
+}
