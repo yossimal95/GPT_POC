@@ -62,7 +62,7 @@ const getInfo = () => {
                 return printText("לא מצאתי איפורמציה לגבי מה ששאלת. אולי תשאל משהו אחר?"); 
             }            
 
-            printText( text?.description + ' ' + text?.extract + (text?.extract.length < 50 ? (' ' + text?.extract) : '' ), true);
+            printText( text?.description + ' ' + text?.extract + (text?.extract.length < 300 ? (' ' + text?.extract) : '' ), true);
             isSearching = false;
         })
         .catch((err) => {
