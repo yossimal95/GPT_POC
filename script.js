@@ -25,7 +25,7 @@ const printText = (text, mix) => {
     let print = setInterval(() => {
         if (index > textArr.length || textArr[index] == null) {
             isWriting = false;
-            pushText('.');
+            //pushText('.');
             addSpace();
             return clearInterval(print);
         }
