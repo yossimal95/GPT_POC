@@ -67,7 +67,7 @@ const getInfo = () => {
                 isSearching = false;
                 return printText("לא מצאתי איפורמציה לגבי מה ששאלת. אולי תשאל משהו אחר?"); 
             }            
-            pushText(text + ':<br/>');
+            pushText(mainWord.replaceAll('_', ' ') + ':<br/>');
             printText( text?.description + ' ' + text?.extract + (text?.extract.length < 300 ? (' ' + text?.extract) : '' ), true);
             isSearching = false;
         })
