@@ -58,6 +58,7 @@ const getInfo = () => {
         })
         .then((text) => {
             if (text == '') {
+                isSearching = false;
                 return printText("לא מצאתי איפורמציה לגבי מה ששאלת. אולי תשאל משהו אחר?"); 
             }            
 
