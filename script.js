@@ -8,6 +8,11 @@ const addSpace = () => {
     output.innerHTML += '<br /><br /><br />';
 }
 
+const pushText = (text) => {
+    let output = document.querySelector(".output");
+    output.innerHTML += text;
+}
+
 const printText = (text, mix) => {
     if (isWriting) {
         return;
@@ -61,7 +66,7 @@ const getInfo = () => {
                 isSearching = false;
                 return printText("לא מצאתי איפורמציה לגבי מה ששאלת. אולי תשאל משהו אחר?"); 
             }            
-
+            pushText(mainWord + ':<br/>');
             printText( text?.description + ' ' + text?.extract + (text?.extract.length < 300 ? (' ' + text?.extract) : '' ), true);
             isSearching = false;
         })
